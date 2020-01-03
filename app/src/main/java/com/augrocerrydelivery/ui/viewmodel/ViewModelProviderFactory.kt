@@ -1,4 +1,4 @@
-package com.augrocerrydelivery.viewmodels
+package com.augrocerrydelivery.ui.viewmodel
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
