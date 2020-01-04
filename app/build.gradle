@@ -103,14 +103,14 @@ dependencies {
     // LiveData Coroutines
     implementation "androidx.lifecycle:lifecycle-livedata-ktx:2.1.0"
 
+    implementation 'androidx.viewpager2:viewpager2:1.0.0'
+
 
     // -- Room
     implementation "androidx.room:room-runtime:2.2.3"
     kapt "androidx.room:room-compiler:2.2.3"
     // Kotlin Extensions and Coroutines support for Room
     implementation "androidx.room:room-ktx:2.2.3"
-
-    // Dagger
 
     // Dagger2 core
     implementation "com.google.dagger:dagger:2.24"

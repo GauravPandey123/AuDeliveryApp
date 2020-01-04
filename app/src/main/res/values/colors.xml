@@ -3,7 +3,7 @@
     <!-- Main theme colors -->
     <color name="colorPrimary">#fff</color>
     <color name="colorPrimaryDark">#1C242F</color>
-    <color name="colorAccent">#FA7B91</color>
+    <color name="colorAccent">#E46E00</color>
 
     <!-- Secondary theme colors -->
     <color name="tealDark">#0094DE</color>
@@ -22,4 +22,5 @@
     <color name="default_background_color">#EEEEEE</color>
 
     <color name="white">#fff</color>
+    <color name="black">#000</color>
 </resources>
