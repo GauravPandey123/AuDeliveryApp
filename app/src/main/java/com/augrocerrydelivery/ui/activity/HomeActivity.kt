@@ -10,6 +10,7 @@ import com.augrocerrydelivery.ui.viewmodel.ViewModelProviderFactory
 import com.augrocerrydelivery.utils.BOTTOM_NAV_BACKSTACK_KEY
 import com.augrocerrydelivery.utils.BottomNavController
 import com.augrocerrydelivery.utils.BottomNavController.BackStack
+import com.augrocerrydelivery.utils.DataState
 import com.augrocerrydelivery.utils.setUpNavigation
 import com.bumptech.glide.RequestManager
 import com.google.android.material.bottomnavigation.BottomNavigationView
@@ -44,6 +45,9 @@ class HomeActivity : BaseActivity(), BottomNavController.NavGraphProvider,
         setContentView(R.layout.activity_main)
         setupBottomNavigationView(savedInstanceState)
 
+    }
+
+    override fun onDataStateChange(dataState: DataState<*>?) {
     }
 
     override fun getNavGraphId(itemId: Int): Int = when (itemId) {

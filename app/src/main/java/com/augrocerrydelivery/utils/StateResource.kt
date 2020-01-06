@@ -1,4 +1,4 @@
-package com.codingwithmitch.openapi.ui
+package com.augrocerrydelivery.utils
 
 
 data class Loading(val isLoading: Boolean)

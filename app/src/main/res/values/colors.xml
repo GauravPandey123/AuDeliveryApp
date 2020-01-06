@@ -23,4 +23,6 @@
 
     <color name="white">#fff</color>
     <color name="black">#000</color>
+
+    <color name="grey6">#F1F1F1</color>
 </resources>

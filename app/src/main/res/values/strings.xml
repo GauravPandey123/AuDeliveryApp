@@ -36,6 +36,14 @@
     <string name="time">Time</string>
     <string name="pickup">To Pickup - Order # 3142</string>
     <string name="date">date</string>
+    <string name="scheduledtime">Scheduled Time</string>
+    <string name="pickupbusiness">PickUp: Buisness Details</string>
+    <string name="vedorname">Vebdor Name</string>
+    <string name="mobilno">Mobile No</string>
+    <string name="phonenp">Enter Mobile No</string>
+    <string name="newOrder">New Order</string>
+    <string name="inprocess">In Process</string>
+    <string name="order_history">Order History</string>
 
 
 </resources>

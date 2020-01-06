@@ -4,6 +4,7 @@ import android.os.Bundle
 import android.os.PersistableBundle
 import androidx.navigation.findNavController
 import com.augrocerrydelivery.R
+import com.augrocerrydelivery.utils.DataState
 
 class AuthActivity : BaseActivity() {
 
@@ -17,6 +18,9 @@ class AuthActivity : BaseActivity() {
 
     override fun onResume() {
         super.onResume()
+    }
+
+    override fun onDataStateChange(dataState: DataState<*>?) {
     }
 
 

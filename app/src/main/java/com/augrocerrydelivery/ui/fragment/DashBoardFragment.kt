@@ -6,10 +6,10 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import com.augrocerrydelivery.R
-import com.augrocerrydelivery.ui.adapter.DashBoardAdapter
-import com.google.android.material.tabs.TabLayout
+import com.augrocerrydelivery.ui.adapter.DashBoardViewPagerAdapter
 import com.google.android.material.tabs.TabLayoutMediator
 import kotlinx.android.synthetic.main.dashboard_fragment.*
+
 
 class DashBoardFragment : Fragment() {
 
@@ -30,15 +30,26 @@ class DashBoardFragment : Fragment() {
 
     private fun setUpElements() {
         // Must be declared before TabLayoutMediator.attach()
-        viewpagerDashBoard.adapter = DashBoardAdapter()
+        viewpagerDashBoard.adapter = createCardAdapter()
         TabLayoutMediator(tabLayoutDashBoard, viewpagerDashBoard,
             TabLayoutMediator.TabConfigurationStrategy { tab, position ->
                 // Styling each tab here
-                tab.setText("Order $position")
+                when (position) {
+                    0->
+                        tab.text = activity?.resources?.getString(R.string.newOrder)
+                    1 ->
+                        tab.text = activity?.resources?.getString(R.string.inprocess)
+                    2 ->
+                        tab.text = activity?.resources?.getString(R.string.order_history)
+
+                }
             }).attach()
 
 
+    }
 
+    private fun createCardAdapter(): DashBoardViewPagerAdapter? {
+        return DashBoardViewPagerAdapter(activity!!)
     }
 
 
