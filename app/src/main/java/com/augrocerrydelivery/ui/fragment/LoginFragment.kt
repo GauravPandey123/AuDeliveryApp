@@ -35,8 +35,10 @@ class LoginFragment : Fragment() {
         }
     }
 
-    fun navForgotPassowrd(){
+    private fun navForgotPassowrd(){
         findNavController().navigate(R.id.action_launcherFragment_to_forgotPasswordFragment)
 
     }
+
+
 }

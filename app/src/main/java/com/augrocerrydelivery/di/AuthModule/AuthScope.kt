@@ -1,4 +1,8 @@
 package com.augrocerrydelivery.di.AuthModule
 
-class AuthScope {
+import javax.inject.Scope
+
+@Scope
+@kotlin.annotation.Retention(AnnotationRetention.RUNTIME)
+annotation class AuthScope {
 }
