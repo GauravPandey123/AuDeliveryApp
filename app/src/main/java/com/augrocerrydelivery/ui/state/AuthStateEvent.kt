@@ -1,12 +1,11 @@
 package com.augrocerrydelivery.ui.state
 
+import com.augrocerrydelivery.api.login.requets.LoginRequets
+
 sealed class AuthStateEvent {
 
     data class LoginAttemptEvent(
-        val email: String,
-        val mobilNo: String,
-        val password: String
-
+        val loginRequets: LoginRequets
     ) : AuthStateEvent()
 
     class CheckPreviousAuthEvent() : AuthStateEvent()

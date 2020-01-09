@@ -11,7 +11,6 @@ import retrofit2.http.POST
 interface UiAuthApiService {
 
     @POST("driver-login.php")
-    @FormUrlEncoded
     fun login(@Body loginRequets: LoginRequets) : LiveData<GenericApiResponse<LoginResponse>>
 
 }

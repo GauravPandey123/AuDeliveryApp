@@ -7,12 +7,9 @@ import com.augrocerrydelivery.api.UiAuthApiService
 import com.augrocerrydelivery.api.login.requets.LoginRequets
 import com.augrocerrydelivery.api.login.response.LoginResponse
 import com.augrocerrydelivery.session.SessionManager
-import com.augrocerrydelivery.ui.state.AuthViewState
-import com.augrocerrydelivery.utils.ApiSuccessResponse
-import com.augrocerrydelivery.utils.DataState
-import com.augrocerrydelivery.utils.GenericApiResponse
-import com.augrocerrydelivery.utils.NetworkBoundResource
+import com.augrocerrydelivery.utils.*
 import com.codingwithmitch.openapi.repository.JobManager
+import com.codingwithmitch.openapi.ui.auth.state.AuthViewState
 
 import kotlinx.coroutines.Job
 import javax.inject.Inject
@@ -36,13 +33,9 @@ constructor(
             true,
             false
 
-        ){
-            override fun loadFromCache(): LiveData<AuthViewState> {
-                TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
-            }
+        ) {
 
             override suspend fun updateLocalDb(cacheObject: Any?) {
-                TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
             }
 
             // not used in this case
@@ -51,30 +44,31 @@ constructor(
             }
 
             override suspend fun handleApiSuccessResponse(response: ApiSuccessResponse<LoginResponse>) {
-                TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
+
             }
 
             override fun createCall(): LiveData<GenericApiResponse<LoginResponse>> {
-                TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
+                return uiAuthApiService.login(loginRequets)
             }
 
             override fun setJob(job: Job) {
-                TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
+                addJob("attemptLogin", job)
+
+            }
+
+            override fun loadFromCache(): LiveData<AuthViewState> {
+                return AbsentLiveData.create()
             }
         }.asLiveData()
 
 
-
-
-
     }
 
 
-    private fun saveAuthenticateUserToPrefs(){
-
-    }
-
-
+//    private fun saveAuthenticateUserToPrefs(loginRequets : LoginRequets) {
+//        sharedPrefsEditor.putString(PreferenceKeys.PREVIOUS_AUTH_USER, loginRequets)
+//        sharedPrefsEditor.apply()
+//    }
 
 
 }
